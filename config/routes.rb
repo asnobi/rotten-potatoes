@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
+  get 'users/new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  
   root 'movies#index'
 
   # Example of regular route:
@@ -15,6 +20,12 @@ Rails.application.routes.draw do
   #   resources :products
 
   resources :movies
+  resources :users
+  
+  match '/login', to: 'sessions#new', via: :get
+  match '/login_create', to: 'sessions#create', via: :post
+  match '/logout', to: 'sessions#destroy', via: :delete
+  
   
   # Example resource route with options:
   #   resources :products do
