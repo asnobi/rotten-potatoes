@@ -5,7 +5,16 @@ class User < ActiveRecord::Base
     #@a.user_id = "test"
     #@a.save
 
+    def self.test(user_params)    
+        @a = User.new(user_params)
+        #@a.email = "TEST"
+        @a.session_token = SecureRandom.base64
         
+        @user = @a
+        #@a.save
+
+        
+    end
     
     
     
