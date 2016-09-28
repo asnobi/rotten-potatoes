@@ -1,0 +1,15 @@
+%h1 Login
+
+= form_tag login_create_path do
+
+  = label :user, :id, 'User-ID'
+  = text_field :user, 'user_id'
+
+  = label :user, :email, 'E-mail'
+  = text_field :user, 'email'
+  
+
+
+  = submit_tag 'Login To My Account'
+
+= link_to 'Sign-up for an account', new_user_path

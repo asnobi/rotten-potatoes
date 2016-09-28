@@ -13,15 +13,14 @@ class UsersController < ApplicationController
   def create
     
     @user = User.test(user_params)
-    #@user.save
-    #redirect_to new_user_path
-    #@user.save
-    if (User.exists?(user_id: @user.user_id)) || (@user.user_id == "")
+
+
+    if (User.exists?(user_id: @user.user_id)) || (@user.user_id == "") || (@user.email == "!!")
       redirect_to new_user_path
       flash[:notice] = "This User ID is already exists!!"
     else
       @user.save
-      redirect_to movies_path
+      redirect_to login_path
       flash[:notice] = "Welcome #{@user.user_id}. Your account has been created"
     end
 
