@@ -28,10 +28,10 @@ class SessionsController < ApplicationController
     if @usr = User.user_sess(sess_params)
       session[:session_token] = @usr.session_token
       #@current_user ||=	session[:session_token	] && User.find_by_session_token(session[:session_token])
-      flash[:notice] = "You are logged in  as ID:#{@usr.user_id}  "   
+      flash[:notice] = "You are logged in as ID:#{@usr.user_id}  "     
       redirect_to movies_path
     else
-      flash[:notice] = "Wrong. Email or ID"   
+      flash[:notice] = "Wrong Email or ID"  
       redirect_to movies_path
     end
     

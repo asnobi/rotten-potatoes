@@ -14030,3 +14030,716 @@ NoMethodError (undefined method `user_id' for nil:NilClass):
   Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.1ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (113.2ms)
+
+
+Started POST "/login_create" for 50.80.32.8 at 2016-09-30 03:58:58 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JaFDsg5Zan+6wkpvndiMYEGwdOk0WFcmJz/AxX4nQCFr8EdhMnnlYxPR47IekyD8+23wPpuDPTnm+UMwfHkDHg==", "user"=>{"user_id"=>"1", "email"=>"a"}, "commit"=>"Login To My Account"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."user_id" = ? LIMIT 1[0m  [["user_id", "1"]]
+Redirected to https://selt-azooz.c9users.io/movies
+Completed 302 Found in 11ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/movies" for 50.80.32.8 at 2016-09-30 03:58:58 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = ? LIMIT 1  [["session_token", "9gAsoV8QbNCzrqOkmmKMuA=="]]
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 43ms (Views: 39.0ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/logout" for 50.80.32.8 at 2016-09-30 04:00:01 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"RKJkG+pCBfWy7i3bzJgiJiC7AuZyrQeQ5OggXn9DC84K82DI1mKK6Rv9hAZP0466mmaGMd12bY8lLqOrfR1I8Q=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = ? LIMIT 1  [["session_token", "9gAsoV8QbNCzrqOkmmKMuA=="]]
+Redirected to https://selt-azooz.c9users.io/movies
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 50.80.32.8 at 2016-09-30 04:00:01 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 50.80.32.8 at 2016-09-30 04:01:00 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 51ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_create" for 50.80.32.8 at 2016-09-30 04:02:02 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5fq0z0y0O9wcekmhqtp+PSxuxat9+SU2jBCx2OGT432rq7AccJS0wLVp4HwpkdKhlrNBfNIiTylN1jIt482gQg==", "user"=>{"user_id"=>"1", "email"=>"a"}, "commit"=>"Login To My Account"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."user_id" = ? LIMIT 1  [["user_id", "1"]]
+Redirected to https://selt-azooz.c9users.io/movies
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 50.80.32.8 at 2016-09-30 04:02:02 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = ? LIMIT 1[0m  [["session_token", "9gAsoV8QbNCzrqOkmmKMuA=="]]
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 64ms (Views: 61.0ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/logout" for 50.80.32.8 at 2016-09-30 04:04:17 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"L+j4arSLa8oK1SwPGFlIP73DzMOQ3RfPYXrdSBO/c1Fhufy5iKvk1qPGhdKbEuSjBx5IFD8GfdCgvF69EeEwbg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = ? LIMIT 1[0m  [["session_token", "9gAsoV8QbNCzrqOkmmKMuA=="]]
+Redirected to https://selt-azooz.c9users.io/movies
+Completed 302 Found in 75ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 50.80.32.8 at 2016-09-30 04:04:17 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 55ms (Views: 52.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 50.80.32.8 at 2016-09-30 04:04:18 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 53ms (Views: 52.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 50.80.32.8 at 2016-09-30 04:05:13 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (23.1ms)
+Completed 200 OK in 46ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.80.32.8 at 2016-09-30 04:05:14 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/default.self-49554e9e270baee081b10069c4f5f33b75f6549ad240aac134400c56d752bf9f.css?body=1" for 50.80.32.8 at 2016-09-30 04:05:14 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 50.80.32.8 at 2016-09-30 04:05:14 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.80.32.8 at 2016-09-30 04:05:14 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 50.80.32.8 at 2016-09-30 04:05:14 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.80.32.8 at 2016-09-30 04:05:14 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 50.80.32.8 at 2016-09-30 04:05:14 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 50.80.32.8 at 2016-09-30 04:05:14 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 50.80.32.8 at 2016-09-30 04:05:14 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.80.32.8 at 2016-09-30 04:05:14 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/login" for 50.80.32.8 at 2016-09-30 04:06:18 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/default.self-49554e9e270baee081b10069c4f5f33b75f6549ad240aac134400c56d752bf9f.css?body=1" for 50.80.32.8 at 2016-09-30 04:06:19 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.80.32.8 at 2016-09-30 04:06:19 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 50.80.32.8 at 2016-09-30 04:06:19 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.80.32.8 at 2016-09-30 04:06:19 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 50.80.32.8 at 2016-09-30 04:06:19 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 50.80.32.8 at 2016-09-30 04:06:19 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 50.80.32.8 at 2016-09-30 04:06:19 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 50.80.32.8 at 2016-09-30 04:06:19 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.80.32.8 at 2016-09-30 04:06:19 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.80.32.8 at 2016-09-30 04:06:19 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/login" for 50.80.32.8 at 2016-09-30 04:07:58 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.80.32.8 at 2016-09-30 04:07:58 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/default.self-49554e9e270baee081b10069c4f5f33b75f6549ad240aac134400c56d752bf9f.css?body=1" for 50.80.32.8 at 2016-09-30 04:07:58 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.80.32.8 at 2016-09-30 04:07:58 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 50.80.32.8 at 2016-09-30 04:07:58 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 50.80.32.8 at 2016-09-30 04:07:58 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 50.80.32.8 at 2016-09-30 04:07:58 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 50.80.32.8 at 2016-09-30 04:07:58 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.80.32.8 at 2016-09-30 04:07:58 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 50.80.32.8 at 2016-09-30 04:07:58 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.80.32.8 at 2016-09-30 04:07:59 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/login" for 50.80.32.8 at 2016-09-30 04:08:13 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 50.80.32.8 at 2016-09-30 04:08:14 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 38ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 50.80.32.8 at 2016-09-30 04:08:15 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 46ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/default.self-49554e9e270baee081b10069c4f5f33b75f6549ad240aac134400c56d752bf9f.css?body=1" for 50.80.32.8 at 2016-09-30 04:08:16 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.80.32.8 at 2016-09-30 04:08:16 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.80.32.8 at 2016-09-30 04:08:16 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 50.80.32.8 at 2016-09-30 04:08:16 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 50.80.32.8 at 2016-09-30 04:08:16 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 50.80.32.8 at 2016-09-30 04:08:16 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 50.80.32.8 at 2016-09-30 04:08:16 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.80.32.8 at 2016-09-30 04:08:16 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.80.32.8 at 2016-09-30 04:08:16 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 50.80.32.8 at 2016-09-30 04:08:16 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/new" for 50.80.32.8 at 2016-09-30 04:08:43 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/default.self-49554e9e270baee081b10069c4f5f33b75f6549ad240aac134400c56d752bf9f.css?body=1" for 50.80.32.8 at 2016-09-30 04:08:43 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.80.32.8 at 2016-09-30 04:08:43 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.80.32.8 at 2016-09-30 04:08:43 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 50.80.32.8 at 2016-09-30 04:08:43 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 50.80.32.8 at 2016-09-30 04:08:43 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 50.80.32.8 at 2016-09-30 04:08:43 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 50.80.32.8 at 2016-09-30 04:08:43 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.80.32.8 at 2016-09-30 04:08:43 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.80.32.8 at 2016-09-30 04:08:43 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 50.80.32.8 at 2016-09-30 04:08:43 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/new" for 50.80.32.8 at 2016-09-30 04:09:16 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (84.8ms)
+Completed 200 OK in 111ms (Views: 110.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/default.self-49554e9e270baee081b10069c4f5f33b75f6549ad240aac134400c56d752bf9f.css?body=1" for 50.80.32.8 at 2016-09-30 04:09:17 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.80.32.8 at 2016-09-30 04:09:17 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.80.32.8 at 2016-09-30 04:09:17 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 50.80.32.8 at 2016-09-30 04:09:17 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 50.80.32.8 at 2016-09-30 04:09:17 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 50.80.32.8 at 2016-09-30 04:09:17 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.80.32.8 at 2016-09-30 04:09:17 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 50.80.32.8 at 2016-09-30 04:09:17 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 50.80.32.8 at 2016-09-30 04:09:17 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.80.32.8 at 2016-09-30 04:09:17 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/new" for 50.80.32.8 at 2016-09-30 04:10:59 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 44ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/default.self-49554e9e270baee081b10069c4f5f33b75f6549ad240aac134400c56d752bf9f.css?body=1" for 50.80.32.8 at 2016-09-30 04:10:59 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.80.32.8 at 2016-09-30 04:10:59 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.80.32.8 at 2016-09-30 04:10:59 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 50.80.32.8 at 2016-09-30 04:10:59 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 50.80.32.8 at 2016-09-30 04:10:59 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 50.80.32.8 at 2016-09-30 04:10:59 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.80.32.8 at 2016-09-30 04:10:59 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.80.32.8 at 2016-09-30 04:10:59 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 50.80.32.8 at 2016-09-30 04:10:59 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 50.80.32.8 at 2016-09-30 04:10:59 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/new" for 50.80.32.8 at 2016-09-30 04:11:51 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/default.self-49554e9e270baee081b10069c4f5f33b75f6549ad240aac134400c56d752bf9f.css?body=1" for 50.80.32.8 at 2016-09-30 04:11:51 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.80.32.8 at 2016-09-30 04:11:51 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 50.80.32.8 at 2016-09-30 04:11:51 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 50.80.32.8 at 2016-09-30 04:11:51 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 50.80.32.8 at 2016-09-30 04:11:51 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.80.32.8 at 2016-09-30 04:11:51 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 50.80.32.8 at 2016-09-30 04:11:51 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 50.80.32.8 at 2016-09-30 04:11:51 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 50.80.32.8 at 2016-09-30 04:11:51 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 50.80.32.8 at 2016-09-30 04:11:51 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users" for 50.80.32.8 at 2016-09-30 04:12:27 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PqpoP0gKa8efENUlcXf1oYHoxopTlJUGlgg08Ih6NVpw+2zsdCrk2zYDfPjyPFk9OzVCXfxP/xlXzrcFiiR2ZQ==", "user"=>{"user_id"=>"33", "email"=>"33"}, "commit"=>"Ceate my Account"}
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."user_id" = ? LIMIT 1[0m  [["user_id", "33"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("user_id", "email", "session_token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", "33"], ["email", "33"], ["session_token", "tmR8H/mNa8AG16lWodbp3Q=="], ["created_at", "2016-09-30 04:12:27.986058"], ["updated_at", "2016-09-30 04:12:27.986058"]]
+  [1m[35m (11.0ms)[0m  commit transaction
+Redirected to https://selt-azooz.c9users.io/login
+Completed 302 Found in 80ms (ActiveRecord: 11.8ms)
+
+
+Started GET "/login" for 50.80.32.8 at 2016-09-30 04:12:28 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 32ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_create" for 50.80.32.8 at 2016-09-30 04:12:32 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E9SJJBu1IhL31WDPK6Tu2os9VPXJcRItDm5aDHLI9ABdhY33J5WtDl7GyRKo70JGMeDQImaqeDLPqNn5cJa3Pw==", "user"=>{"user_id"=>"33", "email"=>"33"}, "commit"=>"Login To My Account"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."user_id" = ? LIMIT 1[0m  [["user_id", "33"]]
+Redirected to https://selt-azooz.c9users.io/movies
+Completed 302 Found in 39ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 50.80.32.8 at 2016-09-30 04:12:33 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = ? LIMIT 1  [["session_token", "tmR8H/mNa8AG16lWodbp3Q=="]]
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 59ms (Views: 56.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies/4" for 50.80.32.8 at 2016-09-30 04:12:36 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = ? LIMIT 1  [["session_token", "tmR8H/mNa8AG16lWodbp3Q=="]]
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered movies/show.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 50ms (Views: 45.2ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/logout" for 50.80.32.8 at 2016-09-30 04:12:37 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"v3r1MQ3GgHWBqbxMHZF6vUzFYHJWwaJmHZd2zRbNBivxK/HiMeYPaSi6FZGe2tYh9hjkpfkayHncUfU4FJNFFA=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = ? LIMIT 1  [["session_token", "tmR8H/mNa8AG16lWodbp3Q=="]]
+Redirected to https://selt-azooz.c9users.io/movies
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 50.80.32.8 at 2016-09-30 04:12:37 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 50.80.32.8 at 2016-09-30 04:12:41 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_create" for 50.80.32.8 at 2016-09-30 04:12:44 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lgdoAmswJOgLNM+WQXlndVTeK/1MYAhaRTa8Gkx1bPvYVmzRVxCr9KInZkvCMsvp7gOvKuO7YkWE8D/vTisvxA==", "user"=>{"user_id"=>"33", "email"=>"33"}, "commit"=>"Login To My Account"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."user_id" = ? LIMIT 1  [["user_id", "33"]]
+Redirected to https://selt-azooz.c9users.io/movies
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 50.80.32.8 at 2016-09-30 04:12:44 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = ? LIMIT 1[0m  [["session_token", "tmR8H/mNa8AG16lWodbp3Q=="]]
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/logout" for 50.80.32.8 at 2016-09-30 04:12:47 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0poqd3jzEibThPOiBHj5QHfrQkwQYXt7pKIFzrm5XG+cyy6kRNOdOnqXWn+HM1XczTbGm7+6EWRlZIY7u+cfUA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = ? LIMIT 1[0m  [["session_token", "tmR8H/mNa8AG16lWodbp3Q=="]]
+Redirected to https://selt-azooz.c9users.io/movies
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 50.80.32.8 at 2016-09-30 04:12:47 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 50.80.32.8 at 2016-09-30 04:12:49 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 50.80.32.8 at 2016-09-30 04:12:51 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 50.80.32.8 at 2016-09-30 04:12:54 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LVHpEeRcGm/PPKkK98Z/xzRoHweWL0ZYF2TBUt/LPrRjAO3C2HyVc2YvANd0jdNbjrWb0Dn0LEfWokKn3ZV9iw==", "user"=>{"user_id"=>"33", "email"=>""}, "commit"=>"Ceate my Account"}
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."user_id" = ? LIMIT 1[0m  [["user_id", "33"]]
+Redirected to https://selt-azooz.c9users.io/users/new
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 50.80.32.8 at 2016-09-30 04:12:54 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/new.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 50.80.32.8 at 2016-09-30 04:12:59 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bgp5BJ+sO9ElDjaDPlP4zVbo1gNxmugW4AfNouX/6jVIW33Xo4y0zYwdn169GFRR7DVS1N5BggkhwU5X56GpCg==", "user"=>{"user_id"=>"23", "email"=>""}, "commit"=>"Ceate my Account"}
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."user_id" = ? LIMIT 1  [["user_id", "23"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("user_id", "email", "session_token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["user_id", "23"], ["email", ""], ["session_token", "L0fIaIBoVdEmnw3/jagJfg=="], ["created_at", "2016-09-30 04:12:59.594807"], ["updated_at", "2016-09-30 04:12:59.594807"]]
+  [1m[36m (9.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://selt-azooz.c9users.io/login
+Completed 302 Found in 14ms (ActiveRecord: 9.6ms)
+
+
+Started GET "/login" for 50.80.32.8 at 2016-09-30 04:12:59 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 50.80.32.8 at 2016-09-30 04:13:05 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_create" for 50.80.32.8 at 2016-09-30 04:13:09 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HHC4k+hZxmmf1w4bjsZduRZd5ynloocuMlqhElMqlLZSIbxA1HlJdTbEp8YNjfElrIBj/kp57THznCLnUXTXiQ==", "user"=>{"user_id"=>"23", "email"=>""}, "commit"=>"Login To My Account"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."user_id" = ? LIMIT 1  [["user_id", "23"]]
+Redirected to https://selt-azooz.c9users.io/movies
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 50.80.32.8 at 2016-09-30 04:13:10 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = ? LIMIT 1[0m  [["session_token", "L0fIaIBoVdEmnw3/jagJfg=="]]
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/logout" for 50.80.32.8 at 2016-09-30 04:13:12 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PrScoOcpSCCGeFB4V8zkWaxBaXCqeVCCaFKRJO8RDSxw5Zhz2wnHPC9r+aXUh0jFFpztpwWiOp2plBLR7U9OEw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = ? LIMIT 1[0m  [["session_token", "L0fIaIBoVdEmnw3/jagJfg=="]]
+Redirected to https://selt-azooz.c9users.io/movies
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 50.80.32.8 at 2016-09-30 04:13:12 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 50.80.32.8 at 2016-09-30 04:15:12 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_create" for 50.80.32.8 at 2016-09-30 04:15:47 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xLgUNieHSflU7aZ8m0wiI9k+Oy2O9xRGLMSmFhGPj5iK6RDlG6fG5f3+D6EYB46/Y+O/+iEsflntAiXjE9HMpw==", "user"=>{"user_id"=>"1", "email"=>"a"}, "commit"=>"Login To My Account"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."user_id" = ? LIMIT 1[0m  [["user_id", "1"]]
+Redirected to https://selt-azooz.c9users.io/movies
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 50.80.32.8 at 2016-09-30 04:15:47 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = ? LIMIT 1  [["session_token", "9gAsoV8QbNCzrqOkmmKMuA=="]]
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 38ms (Views: 35.9ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/logout" for 50.80.32.8 at 2016-09-30 04:26:34 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"RZwsUsCeHTo5Nqj+A6tLeL/GTYLrQH5ak5z3s1yCLgsLzSiB/L6SJpAlASOA4OfkBRvJVUSbFEVSWnRGXtxtNA=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = ? LIMIT 1  [["session_token", "9gAsoV8QbNCzrqOkmmKMuA=="]]
+Redirected to https://selt-azooz.c9users.io/movies
+Completed 302 Found in 134ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/movies" for 50.80.32.8 at 2016-09-30 04:26:34 +0000
+Cannot render console from 50.80.32.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 49ms (Views: 46.2ms | ActiveRecord: 0.7ms)
