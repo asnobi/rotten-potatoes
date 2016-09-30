@@ -1,0 +1,8 @@
+D, [2016-09-30T04:40:28.339870 #4745] DEBUG -- :   [1m[36m (20.5ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "rating" varchar, "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+D, [2016-09-30T04:40:28.354130 #4745] DEBUG -- :   [1m[35m (12.0ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "email" varchar, "session_token" varchar, "timestamps" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+D, [2016-09-30T04:40:28.435296 #4745] DEBUG -- :   [1m[36m (18.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+D, [2016-09-30T04:40:28.435931 #4745] DEBUG -- :   [1m[35m (0.2ms)[0m  select sqlite_version(*)
+D, [2016-09-30T04:40:28.447107 #4745] DEBUG -- :   [1m[36m (10.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+D, [2016-09-30T04:40:28.447988 #4745] DEBUG -- :   [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+D, [2016-09-30T04:40:28.459780 #4745] DEBUG -- :   [1m[36m (11.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160924224056')[0m
+D, [2016-09-30T04:40:28.469262 #4745] DEBUG -- :   [1m[35m (9.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150809022253')

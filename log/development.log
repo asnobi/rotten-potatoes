@@ -14759,3 +14759,4 @@ Processing by MoviesController#index as HTML
   [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
   Rendered movies/index.html.haml within layouts/application (8.2ms)
 Completed 200 OK in 49ms (Views: 44.0ms | ActiveRecord: 0.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
